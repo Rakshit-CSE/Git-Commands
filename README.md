@@ -26,7 +26,7 @@ gh auth login
 <sub>- Authenticates your system with GitHub using CLI.</sub>
 
 ```bash
-gh repo create my-repo-name --source=. --public --push
+gh repo create my-repo-name --source=. --public --remote=origin --push
 ```
 
 <sub>- Creates a GitHub repository and pushes code.</sub>
