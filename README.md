@@ -52,6 +52,16 @@ git checkout feature/login
 
 <sub>- Lists, creates, and switches branches.</sub>
 
+```bash 
+git branch --merged	
+git branch --no-merged	
+git log --graph --oneline --all	
+```
+
+<sub>- Lists branches already merged into current branch.</sub>
+<sub>- Lists branches not yet merged.</sub>
+<sub>- Visualize branch history & merges.</sub>
+
 ## ✅ 5. Staging and Committing Changes
 
 ```bash
