@@ -6,104 +6,112 @@ This guide documents essential Git commands with their real-world usage, example
 
 ## 🔰 1. Initializing and Configuring Git
 
+```bash
 git init
+```
 
-📌 What it does: Initializes a Git repository in your current project directory.
+- Initializes a Git repository in your current project directory.
 
+```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
+```
 
-📌 What it does: Sets your Git identity globally (used in all repos).
+- Sets your Git identity globally (used in all repositories).
 
-## 🌐 2. Connecting to GitHub
-
+```bash
 gh auth login
+```
 
-📌 What it does: Authenticates your system with GitHub using CLI (one-time setup).
+- Authenticates your system with GitHub using CLI (one-time setup).
 
+```bash
 gh repo create my-repo-name --source=. --public --push
+```
 
-📌 What it does: Creates a new GitHub repo from your current folder and pushes the code there.
+- Creates a new GitHub repository from your current folder and pushes the code there.
 
-## 📁 3. Creating and Working with Files
-
+```bash
 touch index.html
 mkdir components
+```
 
-📌 What it does: Creates a new file or directory.
+- Creates a new file or directory.
 
-## 🌿 4. Branching
-
+```bash
 git branch
 git branch feature/login
 git checkout feature/login
+```
 
-📌 What it does: Lists branches, creates a new branch, and switches to it.
+- Lists branches, creates a new branch, and switches to it.
 
-## ✅ 5. Staging and Committing Changes
-
+```bash
 git status
 git add .
 git commit -m "feat: add login UI"
+```
 
-📌 What it does: Shows change status, stages changes, and commits them with a meaningful message.
+- Shows change status, stages changes, and commits them with a meaningful message.
 
-## 🚀 6. Pushing to Remote Repo
-
+```bash
 git push origin feature/login
+```
 
-📌 What it does: Pushes your local branch to GitHub.
+- Pushes your local branch to GitHub.
 
-## 🔄 7. Pulling and Syncing Code
-
+```bash
 git pull origin main
+```
 
-📌 What it does: Pulls latest code from main branch of remote repo.
+- Pulls the latest code from the main branch of the remote repository.
 
-## 🔀 8. Merging
-
+```bash
 git checkout dev
 git merge feature/login
+```
 
-📌 What it does: Switches to dev and merges feature/login into it.
+- Switches to the `dev` branch and merges `feature/login` into it.
 
-## 🧪 9. Undo & Revert
-
+```bash
 git restore file.txt
 git reset --soft HEAD~1
 git reset --hard HEAD~1
 git revert <commit-id>
+```
 
-📌 What it does: Used to undo uncommitted and committed changes safely.
+- Used to undo uncommitted and committed changes safely.
 
-## 🧹 10. Clean Up & Delete Branches
-
+```bash
 git branch -d feature/login
 git push origin --delete feature/login
+```
 
-📌 What it does: Deletes local and remote branches once your feature is merged.
+- Deletes local and remote branches once your feature is merged.
 
-## 🔍 11. View History and Logs
-
+```bash
 git log
+```
 
-📌 What it does: Shows full commit history (author, date, message, ID).
+- Shows the full commit history (author, date, message, ID).
 
+```bash
 git log --oneline
+```
 
-📌 What it does: Displays a summarized version of commit history (great for quick views).
+- Displays a summarized version of the commit history (great for quick views).
 
-## 📦 12. Clone Existing GitHub Repo
-
+```bash
 git clone git@github.com:username/repo-name.git
+```
 
-📌 What it does: Downloads an existing GitHub repo to your local system using SSH.
+- Downloads an existing GitHub repository to your local system using SSH.
 
-## 🔗 13. Link Local Project to GitHub (SSH)
-
+```bash
 git remote add origin git@github.com:username/repo-name.git
+```
 
-📌 What it does: Links your local repo to the remote GitHub repo so you can push/pull code.
+- Links your local repository to the remote GitHub repository so you can push/pull code.
 
 #📋 Bonus Tips
 
