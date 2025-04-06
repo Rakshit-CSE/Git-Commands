@@ -10,33 +10,33 @@ This guide documents essential Git commands with their real-world usage, example
 git init
 ```
 
-- Initializes a Git repository in your current project directory.
+<sub>- Initializes a Git repository in your current project directory.</sub>
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 ```
 
-- Sets your Git identity globally (used in all repositories).
+<sub>- Sets your Git identity globally.</sub>
 
 ```bash
 gh auth login
 ```
 
-- Authenticates your system with GitHub using CLI (one-time setup).
+<sub>- Authenticates your system with GitHub using CLI.</sub>
 
 ```bash
 gh repo create my-repo-name --source=. --public --push
 ```
 
-- Creates a new GitHub repository from your current folder and pushes the code there.
+<sub>- Creates a GitHub repository and pushes code.</sub>
 
 ```bash
 touch index.html
 mkdir components
 ```
 
-- Creates a new file or directory.
+<sub>- Creates a file or directory.</sub>
 
 ```bash
 git branch
@@ -44,7 +44,7 @@ git branch feature/login
 git checkout feature/login
 ```
 
-- Lists branches, creates a new branch, and switches to it.
+<sub>- Lists, creates, and switches branches.</sub>
 
 ```bash
 git status
@@ -52,26 +52,26 @@ git add .
 git commit -m "feat: add login UI"
 ```
 
-- Shows change status, stages changes, and commits them with a meaningful message.
+<sub>- Shows status, stages, and commits changes.</sub>
 
 ```bash
 git push origin feature/login
 ```
 
-- Pushes your local branch to GitHub.
+<sub>- Pushes a branch to GitHub.</sub>
 
 ```bash
 git pull origin main
 ```
 
-- Pulls the latest code from the main branch of the remote repository.
+<sub>- Pulls the latest code from the main branch.</sub>
 
 ```bash
 git checkout dev
 git merge feature/login
 ```
 
-- Switches to the `dev` branch and merges `feature/login` into it.
+<sub>- Switches branches and merges changes.</sub>
 
 ```bash
 git restore file.txt
@@ -80,38 +80,38 @@ git reset --hard HEAD~1
 git revert <commit-id>
 ```
 
-- Used to undo uncommitted and committed changes safely.
+<sub>- Undoes changes safely.</sub>
 
 ```bash
 git branch -d feature/login
 git push origin --delete feature/login
 ```
 
-- Deletes local and remote branches once your feature is merged.
+<sub>- Deletes local and remote branches.</sub>
 
 ```bash
 git log
 ```
 
-- Shows the full commit history (author, date, message, ID).
+<sub>- Shows the full commit history.</sub>
 
 ```bash
 git log --oneline
 ```
 
-- Displays a summarized version of the commit history (great for quick views).
+<sub>- Displays a summarized commit history.</sub>
 
 ```bash
 git clone git@github.com:username/repo-name.git
 ```
 
-- Downloads an existing GitHub repository to your local system using SSH.
+<sub>- Clones a repository using SSH.</sub>
 
 ```bash
 git remote add origin git@github.com:username/repo-name.git
 ```
 
-- Links your local repository to the remote GitHub repository so you can push/pull code.
+<sub>- Links your local repository to a remote one.</sub>
 
 #📋 Bonus Tips
 
@@ -119,5 +119,4 @@ git remote add origin git@github.com:username/repo-name.git
 2. Use meaningful commit messages (feat:, fix:, chore:)
 3. Work on branches, not directly on main
 
-✅ Made by Rakshit | For self-practice and real dev workflows
-🕒 Last Updated: April 2025
+<sub>✅ Made by Rakshit | For self-practice and real dev workflows | 🕒 Last Updated: April 2025</sub>
