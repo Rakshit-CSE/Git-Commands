@@ -9,12 +9,14 @@ This guide documents essential Git commands with their real-world usage, example
 ```bash
 git init
 ```
+
 > Initializes a Git repository in your current project directory.
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "your@email.com"
 ```
+
 > Sets your Git identity globally, used to tag commits with your name and email.
 
 ---
@@ -24,11 +26,13 @@ git config --global user.email "your@email.com"
 ```bash
 gh auth login
 ```
+
 > Authenticates your terminal with GitHub using the GitHub CLI.
 
 ```bash
 gh repo create my-repo-name --source=. --public --remote=origin --push
 ```
+
 > Creates a GitHub repository, links it to your project, and pushes your code in one command.
 
 > **Note:** If `--remote=origin` is not provided, GitHub CLI will auto-generate a remote name. It's safer to use `origin` for consistency.
@@ -41,6 +45,7 @@ gh repo create my-repo-name --source=. --public --remote=origin --push
 touch index.html
 mkdir components
 ```
+
 > Creates a file (`touch`) and a folder (`mkdir`) in your project directory.
 
 ---
@@ -50,16 +55,19 @@ mkdir components
 ```bash
 git branch
 ```
+
 > Lists all local branches.
 
 ```bash
 git branch feature/login
 ```
+
 > Creates a new branch called `feature/login`.
 
 ```bash
 git checkout feature/login
 ```
+
 > Switches to the `feature/login` branch.
 
 > **Warning:** Always commit or stash your changes before switching branches to avoid losing work.
@@ -69,6 +77,7 @@ git branch --merged
 git branch --no-merged
 git log --graph --oneline --all
 ```
+
 > Shows merged branches, unmerged branches, and a visual representation of the commit history.
 
 ---
@@ -78,16 +87,19 @@ git log --graph --oneline --all
 ```bash
 git status
 ```
+
 > Shows modified, added, or deleted files.
 
 ```bash
 git add .
 ```
+
 > Stages all changes in the current directory.
 
 ```bash
 git commit -m "feat: add login UI"
 ```
+
 > Commits staged changes with a message. Prefixes like `feat:`, `fix:`, `chore:` are standard in teams.
 
 ---
@@ -97,6 +109,7 @@ git commit -m "feat: add login UI"
 ```bash
 git push origin feature/login
 ```
+
 > Pushes your local branch to the remote repository on GitHub.
 
 ---
@@ -106,6 +119,7 @@ git push origin feature/login
 ```bash
 git pull origin main
 ```
+
 > Pulls the latest changes from the `main` branch of the remote repo. Always do this before pushing.
 
 ---
@@ -116,6 +130,7 @@ git pull origin main
 git checkout dev
 git merge feature/login
 ```
+
 > Switches to the `dev` branch and merges changes from `feature/login` into it.
 
 ---
@@ -125,6 +140,7 @@ git merge feature/login
 ```bash
 gh pr create --base main --head feature/about-page --title "Add about page" --body "Added a simple about.html page"
 ```
+
 > Creates a PR from your branch to `main` with a title and description.
 
 > **Note:** A Pull Request (PR) is a request to merge code from one branch into another. It allows code review, CI checks, and team collaboration.
@@ -132,6 +148,7 @@ gh pr create --base main --head feature/about-page --title "Add about page" --bo
 ```bash
 gh pr merge --squash --delete-branch
 ```
+
 > Squash merges all commits into one clean commit and deletes the branch remotely.
 
 > **Tip:** Squash = Cleaner history. Ideal for merging feature branches.
@@ -143,26 +160,31 @@ gh pr merge --squash --delete-branch
 ```bash
 git restore file.txt
 ```
+
 > Restores `file.txt` to the last committed state.
 
 ```bash
 git reset --soft HEAD~1
 ```
+
 > Undoes the last commit, keeps changes staged.
 
 ```bash
 git reset --hard HEAD~1
 ```
+
 > Removes the last commit and discards changes completely.
 
 ```bash
 git revert <commit-id>
 ```
+
 > Creates a new commit that reverses a specific commit without affecting history.
 
 ```bash
 git log
 ```
+
 > Find commit IDs here for revert.
 
 ---
@@ -172,11 +194,13 @@ git log
 ```bash
 git stash
 ```
+
 > Saves your uncommitted changes temporarily.
 
 ```bash
 git stash pop
 ```
+
 > Applies the last stash and removes it.
 
 ---
@@ -186,11 +210,13 @@ git stash pop
 ```bash
 git branch -d feature/login
 ```
+
 > Deletes the local branch `feature/login`.
 
 ```bash
 git push origin --delete feature/login
 ```
+
 > Deletes the branch from GitHub.
 
 > **Note:** If you already ran `gh pr merge --delete-branch`, the remote is deleted. You'll still need to delete the local branch manually unless you switch branches first.
@@ -202,6 +228,7 @@ git push origin --delete feature/login
 ```bash
 git remote prune origin
 ```
+
 > Cleans up remote-tracking branches that no longer exist on GitHub.
 
 > **Tip:** Red branches shown by `git branch -r` are usually stale and need pruning.
@@ -214,11 +241,13 @@ git remote prune origin
 git log
 git log --oneline
 ```
+
 > Detailed vs. summarized commit history.
 
 ```bash
 git log --graph --oneline --all
 ```
+
 > Visualizes commits and branches in a tree structure.
 
 ---
@@ -228,11 +257,13 @@ git log --graph --oneline --all
 ```bash
 git clone git@github.com:username/repo-name.git
 ```
+
 > Clones a GitHub repo to your system using SSH.
 
 ```bash
 git remote add origin git@github.com:username/repo-name.git
 ```
+
 > Links your project to a GitHub repository manually.
 
 ---
